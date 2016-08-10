@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import createAuthor from '../actions/createAuthor'
+import createPost from '../actions/createPost'
 
-export default class AddAuthor extends Component {
+export default class AddPost extends Component {
   render() {
     return (
       <div>
         <form onSubmit={this.props.onSubmit}>
-          <input type="text" placeholder="add author" />
+          <input type="text" placeholder="add post" />
           <button>Submit</button>
         </form>
       </div>

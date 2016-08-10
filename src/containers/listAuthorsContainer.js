@@ -4,19 +4,16 @@ import { connect } from 'react-redux'
 import AuthorRow from '../components/authorRow'
 
 const ListAuthorsContainer = class extends Component {
+  //
+  // handleOnClick(event) {
+  //   debugger
+  //   var authorId = event.target.id
+  //
+  // }
 
-  handleOnClick(event) {
-    debugger
-    var authorId = event.target.id
-    this.selectAuthor
-    //on click, changes state of current author to selected:true
-
-
-  }
-  
   render(){
     var authorList = this.props.authors.map((author) => {
-          return <AuthorRow id={author.id} onClick={this.handleOnClick.bind(this)} name={author.name} />
+          return <AuthorRow id={author.id} onClick={this.props.onClick} name={author.name} />
         })
     return(
       <div>

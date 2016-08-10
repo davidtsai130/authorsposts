@@ -3,15 +3,13 @@ const AuthorApp = (state = {authors: [], posts: []}, action) => {
     case 'ADD_AUTHOR':
       return Object.assign({}, state, {authors: [...state.authors, {
         id: action.id,
-        name: action.name,
-        selected: false
+        name: action.name
       } ]})
-    case 'SELECT_AUTHOR':
-      debugger
-      return Object.assign({}, state, {authors: [...state.authors, {
-
-        name: action.text,
-        selected: true
+    case 'ADD_POST':
+      return Object.assign({}, state, {posts: [...state.posts, {
+        authorId: action.authorId,
+        id: action.id,
+        text: action.text
       } ]})
     default:
       return state
