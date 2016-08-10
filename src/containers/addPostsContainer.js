@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import createPost from '../actions/createPost'
 import AddPost from '../components/addPost'
 
+
 const AddPostsContainer = class extends Component {
 
   handleOnSubmit(event) {
     event.preventDefault()
     var newId = this.props.posts.length + 1
-    this.props.createPost(newId, event.target.firstChild.value)
+    var authorId = this.props.authorId
+    this.props.createPost(authorId, newId, event.target.firstChild.value)
   }
 
   render() {

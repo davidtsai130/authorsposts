@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import createPost from '../actions/createPost'
 
 export default class AddPost extends Component {
+
   render() {
     return (
       <div>
